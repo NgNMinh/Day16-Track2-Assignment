@@ -1,0 +1,56 @@
+{
+  "checked_at_utc": "2026-10-04 09:51:08 UTC",
+  "region": "us-east-1",
+  "user_reported_destroy": "Destroy complete! Resources: 27 destroyed.",
+  "scope": "Read-only verification in lab region; not an account-wide audit.",
+  "checks": [
+    {
+      "name": "Instances",
+      "chunk_id": "c855a9",
+      "wall_time_seconds": 4.1400668,
+      "exit_code": 0,
+      "original_token_count": 1,
+      "output": "[]\r\n"
+    },
+    {
+      "name": "Volumes",
+      "chunk_id": "9184fc",
+      "wall_time_seconds": 3.4193588,
+      "exit_code": 0,
+      "original_token_count": 1,
+      "output": "[]\r\n"
+    },
+    {
+      "name": "Elastic IPs",
+      "chunk_id": "2142ca",
+      "wall_time_seconds": 5.5550294000000005,
+      "exit_code": 0,
+      "original_token_count": 1,
+      "output": "[]\r\n"
+    },
+    {
+      "name": "NAT Gateways",
+      "chunk_id": "eb2c63",
+      "wall_time_seconds": 5.3309711,
+      "exit_code": 0,
+      "original_token_count": 22,
+      "output": "[\r\n    {\r\n        \"Id\": \"nat-03ce3b8c297b06fca\",\r\n        \"State\": \"deleted\"\r\n    }\r\n]\r\n"
+    },
+    {
+      "name": "Load balancers",
+      "chunk_id": "551559",
+      "wall_time_seconds": 6.1037219,
+      "exit_code": 0,
+      "original_token_count": 1,
+      "output": "[]\r\n"
+    },
+    {
+      "name": "Terraform state",
+      "chunk_id": "39d369",
+      "wall_time_seconds": 0.78128,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Check date: 2026-10-04 (Asia/Bangkok)
+Source: AWS Cost Explorer API, DAILY, UnblendedCost, grouped by SERVICE
+Time period: Start=2026-10-04, End=2026-10-05
+Result: AccessDeniedException; ai-lab-user is not authorized for ce:GetCostAndUsage.
+Console screenshot now available: screenshots/billing.png. Observed MTD balance USD 0.50; EC2 MTD USD 0.31; monthly forecast USD 12.65. NAT Gateway breakdown is not visible.
+Additional Console source: screenshots/billing_bills.png; refreshed 2026-10-04 16:15:11 UTC+7; October estimated grand total USD 0.50; bill status Pending; service breakdown not visible.
+Service breakdown screenshot: screenshots/billing_services.png; EC2 USD 0.28; Elastic Load Balancing USD 0.09; Virtual Private Cloud USD 0.08; pre-tax USD 0.45; tax USD 0.05. NAT Gateway is not separately visible in collapsed rows.
+Expanded Billing evidence now available: screenshots/billing_nat.png. EC2 USD 0.28 includes NAT Gateway USD 0.18 (4 billed hours at USD 0.045/hour) and running Linux USD 0.10 (t3.micro USD 0.02, t3.medium USD 0.08). The Billing screenshot requirement for EC2/NAT is now covered.

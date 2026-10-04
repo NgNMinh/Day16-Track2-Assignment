@@ -1,0 +1,29 @@
+Command executed: cd ~/ml-benchmark && python3 -u benchmark.py
+Sun Oct  4 08:49:39 UTC 2026
+Host: ip-10-0-10-180 | Python 3.10.12 | threads=2
+Loading /home/ubuntu/ml-benchmark/creditcard.csv ...
+Dataset: 284,807 rows | 492 frauds | splits={'train': {'rows': 182276, 'fraud_rows': 315}, 'validation': {'rows': 45569, 'fraud_rows': 79}, 'test': {'rows': 56962, 'fraud_rows': 98}}
+Training LightGBM with early stopping on validation AUC ...
+Training until validation scores don't improve for 50 rounds
+[100]	valid_0's auc: 0.968136
+Early stopping, best iteration is:
+[124]	valid_0's auc: 0.97294
+Evaluated only: auc
+Measuring inference: 1000 single-row calls and 100 batches of 1000 rows ...
+
+Metric                                      Result
+------------------------------------------------------------------------
+Load data                                   2.376170 s
+Training                                    6.190865 s
+Best iteration                              124
+AUC-ROC                                     0.963502
+Accuracy                                    0.999386
+F1-Score                                    0.822335
+Precision                                   0.818182
+Recall                                      0.826531
+Inference latency (1 row, median)           1.329891 ms
+Inference throughput (1000 rows)            192660.36 rows/s
+Inference time (1000 rows, mean)            5.190481 ms
+Decision threshold (validation F1): 0.96416421
+Confusion matrix [[TN, FP], [FN, TP]]: [[56846, 18], [17, 81]]
+Results saved to: /home/ubuntu/ml-benchmark/benchmark_result.json

@@ -1,0 +1,17 @@
+{
+  "benchmark_image": "screenshots/benchmark.png",
+  "benchmark_result_file": "benchmark_result.json",
+  "benchmark_run_started_at_utc": "2026-10-04T07:19:07.491461+00:00",
+  "benchmark_result_provenance": "Earlier JSON read and verified over SSH in this conversation; restored from that recorded full-precision output after the additional 08:49 UTC run overwrote the VM result.",
+  "resources_image": "screenshots/resources.png",
+  "resource_capture_time_visible": "07:15:30 (date not visible)",
+  "resource_phase": "idle",
+  "cpu_idle_percent": 97.7,
+  "cpu_busy_percent": 2.3,
+  "ram_total_mib": 3836.7,
+  "ram_used_mib": 245.4,
+  "network_visible_in_terminal_image": false,
+  "supplemental_network_log": "resources_during.txt",
+  "supplemental_network_image": "screenshots/resources_during_log.png",
+  "additional_run_directory": "rerun"
+}

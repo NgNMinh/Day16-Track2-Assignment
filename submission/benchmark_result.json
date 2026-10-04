@@ -1,0 +1,109 @@
+{
+  "started_at_utc": "2026-10-04T07:19:07.491461+00:00",
+  "finished_at_utc": "2026-10-04T07:19:19.169817+00:00",
+  "environment": {
+    "hostname": "ip-10-0-10-180",
+    "platform": "Linux-6.8.0-1066-aws-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "logical_cpus": 2,
+    "threads": 2,
+    "package_versions": {
+      "lightgbm": "4.7.0",
+      "scikit-learn": "1.7.2",
+      "pandas": "2.3.3",
+      "numpy": "2.2.6"
+    }
+  },
+  "dataset": {
+    "path": "/home/ubuntu/ml-benchmark/creditcard.csv",
+    "sha256": "76274b691b16a6c49d3f159c883398e03ccd6d1ee12d9d8ee38f4b4b98551a89",
+    "rows": 284807,
+    "features": 30,
+    "fraud_rows": 492,
+    "split": {
+      "train": {
+        "rows": 182276,
+        "fraud_rows": 315
+      },
+      "validation": {
+        "rows": 45569,
+        "fraud_rows": 79
+      },
+      "test": {
+        "rows": 56962,
+        "fraud_rows": 98
+      }
+    },
+    "split_method": "stratified random split, random_state=42"
+  },
+  "load_data_seconds": 2.4505352920023142,
+  "split_data_seconds": 0.29923385300207883,
+  "training_seconds": 6.157145344004675,
+  "best_iteration": 124,
+  "model_parameters": {
+    "objective": "binary",
+    "metric": "auc",
+    "n_estimators": 1000,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "min_child_samples": 20,
+    "reg_lambda": 1.0,
+    "scale_pos_weight": 577.6539682539683,
+    "boost_from_average": false,
+    "random_state": 42,
+    "n_jobs": 2,
+    "deterministic": true,
+    "force_col_wise": true,
+    "verbosity": -1
+  },
+  "early_stopping": {
+    "metric": "auc",
+    "stopping_rounds": 50,
+    "dataset": "validation"
+  },
+  "decision_threshold": 0.9641642137164191,
+  "threshold_selection": "maximum F1 on validation data only",
+  "validation_f1_at_threshold": 0.8133333333333335,
+  "test_metrics": {
+    "auc_roc": 0.9635020686665212,
+    "accuracy": 0.999385555282469,
+    "f1_score": 0.8223350253807107,
+    "precision": 0.8181818181818182,
+    "recall": 0.826530612244898,
+    "average_precision": 0.7440179929159583,
+    "confusion_matrix": [
+      [
+        56846,
+        18
+      ],
+      [
+        17,
+        81
+      ]
+    ]
+  },
+  "inference_latency_ms": 1.2899169996671844,
+  "inference_throughput_rows_per_second": 194727.89377953167,
+  "inference": {
+    "method": "LGBMClassifier.predict_proba plus threshold, in-memory pandas input, perf_counter",
+    "single_row": {
+      "rows_per_call": 1,
+      "repeats": 1000,
+      "warmup_calls": 10,
+      "mean_ms": 1.2936677360121394,
+      "median_ms": 1.2899169996671844,
+      "p95_ms": 1.3205762032157509,
+      "throughput_rows_per_second": 772.9960113889833
+    },
+    "batch_1000_rows": {
+      "rows_per_call": 1000,
+      "repeats": 100,
+      "warmup_calls": 10,
+      "mean_ms": 5.135371109863627,
+      "median_ms": 5.127333501150133,
+      "p95_ms": 5.239524652279215,
+      "throughput_rows_per_second": 194727.89377953167
+    }
+  },
+  "limitations": "Random holdout benchmark; inference excludes disk/network I/O. Timings depend on EC2 load and CPU credits."
+}
